@@ -11,7 +11,7 @@
   --suface-color: rgba(46, 38, 107, 0.141);
   --surface-color-hover: #0a66c2;
   --highlight-color: #0a66c2;
-  --switch-bg-url: url(./img/moon-stars.svg);
+  --switch-bg-url: url(./img/sun.svg);
 }
 
 .light {
@@ -26,6 +26,7 @@
 
 body {
   background: var(--bg-url) no-repeat top center/cover;
+  height: 100vh;
 }
 
 body * {
@@ -33,7 +34,8 @@ body * {
   color: var(--text-color);
 }
 #container {
-  width: 360px;
+  width: 100%;
+  max-width: 588px;
   margin: 56px auto 0px;
   padding: 0 24px;
 }
@@ -70,13 +72,18 @@ body * {
 
   position: absolute;
   top: 50%;
-  right: 0;
+  left: 0;
   z-index: 1;
   transform: translateY(-50%);
+
+  animation: slide-back .2s;
 }
 .light #switch button {
-  right: 0;
-  left: initial;
+  animation: slide-in 0.2s forwards;
+}
+
+#switch button:hover {
+  outline: 8px solid var(--highlight-color);
 }
 
 #switch span {
@@ -148,4 +155,32 @@ footer {
   padding: 24px 0;
   text-align: center;
   font-size: 14px;
+}
+
+@media (min-width: 700px) {
+  :root {
+    --bg-url: url(./img/bg-cabeludo.png);
+  }
+
+  .light {
+    --bg-url: url(./img/bg-desktop-light.jpg);
+  }
+}
+
+@keyframes slide-in {
+  fron {
+    left:0;
+  }
+  to{
+    left: 50%;
+  }
+}
+
+@keyframes slide-back {
+  from {
+    left: 50;
+  } 
+  to{ 
+    left: 0;
+  }
 }
