@@ -21,9 +21,6 @@ Uma página que reúne todos os meus links essenciais, desde redes sociais até 
 4. Figma
 5. Git e Github
 
-## Contribuições
-Este projeto foi inspirado e teve grande influência nas aulas do Educador **Mayk Brito** da Rockeseat. Agradeço pela sua metodologia de ensino clara e objetiva, que ajudou a transformar este projeto em realidade.
-
 ## Licença
 Este projeto está licenciado sob a licença MIT.
 
